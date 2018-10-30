@@ -23,8 +23,8 @@ Modifications:
 
 Do you have issues or suggestions? Submit an issue on the [issues tab](https://github.com/jackbuehner/gmail-dark-modifications/issues)
 
-Add-ons:
-[Square Compose Button - Gmail 2018](https://userstyles.org/styles/159108)
+Add-ons:<br>
+[Square Compose Button - Gmail 2018](https://userstyles.org/styles/159108)<br>
 [ADD-ON | Replace archive with done-Gmail Dark 2018](https://userstyles.org/styles/160365)
 ## Preview
 ![](159026_after.png)
