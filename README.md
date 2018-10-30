@@ -20,7 +20,6 @@ Modifications:
 - red compose button
 - translucent search bar
 - colorful inbox, starred, and snooze icons in sidebar
-- sidebar selected item has no rounded corners
 
 Do you have issues or suggestions? Submit an issue on the [issues tab](https://github.com/jackbuehner/gmail-dark-modifications/issues)
 
@@ -48,6 +47,7 @@ If you would like to contribute to this repository, please...
 ## Update Notes
 v2.0.0
 - most colors and border radii are now customizable (usercss ony)
+- hover effect for email list
 - fix addons headers
 - dark style for Google Calendar agenda view
 - email text is now slightly darker to accomidate for white backgrounds
