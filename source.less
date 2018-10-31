@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.0.0
+@version        2.1.0
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -24,6 +24,12 @@
 @var    select  appbar-color            'App bar background color' {
     "Transparent": "transparent",
     "Gmail red": "#d44b3d",
+    "Accent color": "@button-bg"
+}
+
+@var    select  unread-mail-text-color  'Unread mail text color' {
+    "Default (White)": "#ffffff",
+    "Light blue": "@text-color-blue",
     "Accent color": "@button-bg"
 }
 
@@ -60,6 +66,7 @@
 //these variables need to be removed when installed as user.css
 
 @appbar-color: transparent;
+@unread-mail-text-color: #ffffff;
 @fab-border-rad: 24px;
 @side-tab-border-rad: 16px;
 @doc-preview-border-rad: 16px;
@@ -259,6 +266,10 @@
     }
     .zA:hover:active, .btb {
         box-shadow: @active-effect-light !important;
+    }
+    //unread email text color
+    .zE {
+        color: @unread-mail-text-color;
     }
     //hide scrollbar when list is short
     .aeJ {
