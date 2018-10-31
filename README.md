@@ -45,8 +45,11 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.1.0
+- NEW: choose between light blue, your accent color, or white (default) for unread message text [UserCSS only]
+
 v2.0.0
-- most colors and border radii are now customizable (usercss ony)
+- most colors and border radii are now customizable [UserCSS only]
 - hover effect for email list
 - fix addons headers
 - dark style for Google Calendar agenda view
