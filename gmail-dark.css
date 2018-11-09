@@ -5,53 +5,54 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.1.0
+@version        2.2.1
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
 @preprocessor   less
 
-@var    color   button-bg               'Accent color'                      #d44b3d
-@var    color   fab-bg                  'FAB background color'              #d44b3d
-@var    color   bg-color-1              'Main background color'             #111111
-@var    color   bg-color-context        'Context menu background color'     #242424
-@var    color   bg-color-2              'Secondary background color'        #212121
-@var    color   bg-color-3              'Tertiary background color'         #363636
-@var    color   bg-color-4              'Quaternary background color'       #424242
+@var    checkbox    email-body              'Dark theme in email body'          1
 
-@var    select  appbar-color            'App bar background color' {
+@var    color       button-bg               'Accent color'                      #d44b3d
+@var    color       fab-bg                  'FAB background color'              #d44b3d
+@var    color       bg-color-1              'Main background color'             #111111
+@var    color       bg-color-context        'Context menu background color'     #242424
+@var    color       bg-color-2              'Secondary background color'        #212121
+@var    color       bg-color-3              'Tertiary background color'         #363636
+@var    color       bg-color-4              'Quaternary background color'       #424242
+
+@var    select      appbar-color            'App bar background color' {
     "Transparent": "transparent",
     "Gmail red": "#d44b3d",
     "Accent color": "@button-bg"
 }
 
-@var    select  unread-mail-text-color  'Unread mail text color' {
+@var    select      unread-mail-text-color  'Unread mail text color' {
     "Default (White)": "#ffffff",
     "Light blue": "@text-color-blue",
     "Accent color": "@button-bg"
 }
 
-@var    color   text-color-de           'Text color DE'                     #dedede
-@var    color   text-color-c            'Text color C'                      #cccccc
-@var    color   text-color-b            'Text color B'                      #bbbbbb
-@var    color   text-color-9            'Text color 9'                      #999999
-@var    color   text-color-6            'Text color 6'                      #666666
-@var    color   fab-text                'FAB text color'                    #e0e0e0
+@var    color       text-color-de           'Text color DE'                     #dedede
+@var    color       text-color-c            'Text color C'                      #cccccc
+@var    color       text-color-b            'Text color B'                      #bbbbbb
+@var    color       text-color-9            'Text color 9'                      #999999
+@var    color       text-color-6            'Text color 6'                      #666666
+@var    color       fab-text                'FAB text color'                    #e0e0e0
 
-@var    text    fab-border-rad          'FAB border radius'                 24px
-@var    text    side-tab-border-rad     'Side navigation border radius'     16px
-@var    text    doc-preview-border-rad  'Email list buttons border radius'  16px
-@var    text    button-border-rad       'Button border radius'              4px
-@var    text    label-border-rad        'Label border radius'               0px
+@var    text        fab-border-rad          'FAB border radius'                 24px
+@var    text        side-tab-border-rad     'Side navigation border radius'     16px
+@var    text        doc-preview-border-rad  'Email list buttons border radius'  16px
+@var    text        button-border-rad       'Button border radius'              4px
+@var    text        label-border-rad        'Label border radius'               0px
 
-@var    color   hover-color-dark        Dark_Items_Hover_color              rgba(0, 0, 0, .05)
-@var    color   active-color-dark       Dark_Items_Active_color             rgba(0, 0, 0, .1)
-@var    color   hover-color-light       Light_Items_Hover_color             rgba(255,255,255,.05)
-@var    color   active-color-light      Light_Items_Active_color            rgba(255,255,255,.1)
-@var    color   hover                   hover                               rgba(255,255,255,0.1)
-@var    color   active                  active                              rgba(255,255,255,0.2)
-@var    color   selectedhover           selectedhover                       rgba(255,255,255,0.3)
-
+@var    color       hover-color-dark        Dark_Items_Hover_color              rgba(0, 0, 0, .05)
+@var    color       active-color-dark       Dark_Items_Active_color             rgba(0, 0, 0, .1)
+@var    color       hover-color-light       Light_Items_Hover_color             rgba(255,255,255,.05)
+@var    color       active-color-light      Light_Items_Active_color            rgba(255,255,255,.1)
+@var    color       hover                   hover                               rgba(255,255,255,0.1)
+@var    color       active                  active                              rgba(255,255,255,0.2)
+@var    color       selectedhover           selectedhover                       rgba(255,255,255,0.3)
 ==/UserStyle== */
 @-moz-document url-prefix("https://mail.google.com/mail") {
   .md-button {
@@ -67,19 +68,19 @@
     border: none;
   }
   .md-button:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
   .md-button:active,
   .md-button:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .md-button:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .md-button-transparent {
@@ -98,19 +99,19 @@
     background: none;
   }
   .md-button-transparent:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
   .md-button-transparent:active,
   .md-button-transparent:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .md-button-transparent:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .md-button-transparent:hover,
@@ -179,9 +180,13 @@
   .wT .TO .aHS-bnt .qj,
   .wT .TO .aHS-bnt .qj::before,
   .wT .TO .aHS-bnt .qj {
-    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png');
     opacity: 1 !important;
-    filter: brightness(200%);
+    background-image: none;
+    -webkit-mask: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png') no-repeat center;
+    mask: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    background-color: #d44b3d;
   }
   .wT .TO .aHS-bnw .qj {
     background-image: url('https://www.gstatic.com/images/icons/material/system/1x/star_googyellow500_20dp.png');
@@ -202,21 +207,36 @@
   .aj5.J-KU-Jg {
     border-top-color: #212121;
   }
-  .gb_Te {
+  .gb_Te,
+  .gb_Xe,
+  #aso_search_form_anchor,
+  .SK.ZF-zT {
     border-radius: 4px;
+    filter: invert(90%) hue-rotate(180deg);
   }
-  .gb_fe .gb_Te {
-    background: rgba(255, 255, 255, 0.1);
+  .gb_fe .gb_Te,
+  .gb_ie .gb_Xe {
+    background: rgba(0, 0, 0, 0.15);
   }
-  .gb_fe .gb_Te:hover {
-    background: rgba(255, 255, 255, 0.2);
+  .gb_fe .gb_Te:hover,
+  .gb_ie .gb_Xe:hover {
+    background: rgba(0, 0, 0, 0.25);
   }
-  .gb_Te.gb_bf button svg {
-    color: #ffffff;
+  .gb_Xe.gb_ff {
+    background: #fff !important;
+  }
+  .gb_Te.gb_bf button svg,
+  .gb_Xe button svg {
+    fill: #000000;
   }
   .gb_cf::placeholder,
+  .gb_gf::placeholder,
   .gb_Te.gb_bf .gb_cf {
     color: #dedede !important;
+  }
+  #\:ht {
+    background-color: #eee;
+    color: #111;
   }
   .bAp.b8.UC .vh {
     border-radius: 2px;
@@ -272,19 +292,19 @@
     border-color: transparent !important;
   }
   .Bn:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
   .Bn:active,
   .Bn:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .Bn:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .Bn:hover,
@@ -315,14 +335,23 @@
     color: #dedede;
   }
   .J-KU-KO.aIf-aLe::before {
-    background-color: #FF6D54;
+    background-color: #e5938b;
+    background-color: #ff6d54;
   }
   .J-KU-KO.aIf-aLe .aKz {
-    color: #FF6D54;
+    color: #e5938b;
+    color: #ff6d54;
   }
   .J-KU-KO > .aIf-aLf {
-    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png');
-    filter: brightness(200%);
+    /*background-image: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png');
+            filter: brightness(200%);*/
+    background-image: none;
+    -webkit-mask: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png') no-repeat center;
+    mask: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    background-color: #e5938b;
+    background-color: #ff6d54;
   }
   .J-KU-KO.aKe-aLe::before {
     background-color: #70A6FF;
@@ -492,7 +521,7 @@
   }
   .bzx .bzx:hover,
   .bzx .bzq:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
@@ -500,46 +529,26 @@
   .bzx .bzq:active,
   .bzx .bzx:focus:hover,
   .bzx .bzq:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .bzx .bzx:focus,
   .bzx .bzq:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
-  .a3s,
-  .g6,
-  .hx .h7 .Bk .G2.afm .adn {
-    color: #bbbbbb;
+  .gs > div:not(.gE):not(.wj) {
+    filter: invert(93.2%) hue-rotate(180deg);
+    background-color: #fff;
   }
-  .a3s .MsoNormal,
-  .g6 .MsoNormal,
-  .hx .h7 .Bk .G2.afm .adn .MsoNormal,
-  .a3s .hx .ii,
-  .g6 .hx .ii,
-  .hx .h7 .Bk .G2.afm .adn .hx .ii,
-  .a3s .hx,
-  .g6 .hx,
-  .hx .h7 .Bk .G2.afm .adn .hx,
-  .a3s .gmail_default,
-  .g6 .gmail_default,
-  .hx .h7 .Bk .G2.afm .adn .gmail_default {
-    color: #bbbbbb;
+  .gs > div:not(.gE):not(.wj) img {
+    filter: invert(100%) hue-rotate(180deg) contrast(120%) saturate(120%);
   }
-  .MsoNormal > span,
-  .MsoNormal > b > span,
-  .li span,
-  font {
-    color: #bbbbbb !important;
-  }
-  .gmail_quote {
-    color: #cccccc;
-  }
-  .ii a[href] {
-    color: #78b4f8;
+  .gs > div:not(.gE):not(.wj) ::selection {
+    color: #78b4f8 !important;
+    background: #000;
   }
   div.ajR {
     background-color: #313131;
@@ -644,8 +653,12 @@
   .e {
     color: #d44b3d;
   }
-  .bqf {
-    filter: invert(86%) hue-rotate(318deg);
+  .bqf:focus {
+    box-shadow: inset 0 -2px 0 0 #d44b3d;
+  }
+  .agd .J-M-JJ input {
+    background: #242424;
+    color: #dedede;
   }
   .A0 {
     background-image: url('https://www.gstatic.com/images/icons/material/system/1x/search_white_20dp.png');
@@ -690,7 +703,7 @@
   .T-I-atl:hover,
   div.Kj-JD-Jl > button.J-at1-auR:hover,
   .bvs > .Kj-JD-Jl > button.J-at1-auR:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
@@ -702,7 +715,7 @@
   .T-I-atl:focus:hover,
   div.Kj-JD-Jl > button.J-at1-auR:focus:hover,
   .bvs > .Kj-JD-Jl > button.J-at1-auR:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
@@ -711,7 +724,7 @@
   .T-I-atl:focus,
   div.Kj-JD-Jl > button.J-at1-auR:focus,
   .bvs > .Kj-JD-Jl > button.J-at1-auR:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .bum .T-bfE,
@@ -740,7 +753,7 @@
   .aJ7 .Kj-JD-Jl button:hover,
   .pD .Kj-JD-Jl button:hover,
   .Kj-JD .Kj-JD-Jl button:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
@@ -756,7 +769,7 @@
   .aJ7 .Kj-JD-Jl button:focus:hover,
   .pD .Kj-JD-Jl button:focus:hover,
   .Kj-JD .Kj-JD-Jl button:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
@@ -767,7 +780,7 @@
   .aJ7 .Kj-JD-Jl button:focus,
   .pD .Kj-JD-Jl button:focus,
   .Kj-JD .Kj-JD-Jl button:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .bum .T-bfE:hover,
@@ -890,19 +903,19 @@
     color: #ffffff;
   }
   .T-P .a7V .T-I.T-I-ax7.T-I-Jp:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
   .T-P .a7V .T-I.T-I-ax7.T-I-Jp:active,
   .T-P .a7V .T-I.T-I-ax7.T-I-Jp:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .T-P .a7V .T-I.T-I-ax7.T-I-Jp:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .T-P .a7V .T-I.T-I-ax7.T-I-Jp:hover {
@@ -1132,19 +1145,19 @@
     margin-top: 10px;
   }
   .brC-brG-bBF-a5b-pj:hover {
-    background-color: #ee5847;
+    background-color: #d7574a;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
     color: #ffffff;
   }
   .brC-brG-bBF-a5b-pj:active,
   .brC-brG-bBF-a5b-pj:focus:hover {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
   }
   .brC-brG-bBF-a5b-pj:focus {
-    background-color: #ef6050;
+    background-color: #da6357;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
   }
   .aT5-aOt-M {
@@ -1416,6 +1429,22 @@
   .Kk7lMc-ae3xF-r4nke-fmcmS {
     color: #cccccc;
   }
+  .Kk7lMc-ae3xF-tJHJj-LgbsSe:hover {
+    background-color: #333;
+  }
+  .Kk7lMc-ae3xF-tJHJj-LgbsSe svg {
+    fill: #fff !important;
+  }
+  /*header searchbar*/
+  .Kk7lMc-ae3xF-G0jgYd-haAclf {
+    background-color: #111;
+  }
+  .Kk7lMc-ae3xF-G0jgYd-YPqjbf {
+    color: #9e9e9e;
+  }
+  .Kk7lMc-ae3xF-tJHJj-OAU7Vd-Bz112c {
+    fill: #fff !important;
+  }
   /*//intro//*/
   /*image*/
   /*title*/
@@ -1517,6 +1546,13 @@
   /*snackbar*/
   .Q0hgme-vDaB1c {
     border-radius: 0;
+  }
+  /*image*/
+  .Q0hgme-Q7GJAc-xFQqWe-MJoBVe.xFQqWe-RFnRab .xFQqWe-MJoBVe-HiaYvf {
+    filter: invert(97.1%) hue-rotate(190deg) brightness(236%);
+  }
+  .Q0hgme-Q7GJAc-xFQqWe-MJoBVe.xFQqWe-G0jgYd .xFQqWe-MJoBVe-HiaYvf {
+    filter: invert(100%) brightness(200%);
   }
 }
 @-moz-document url-prefix("https://calendar.google.com/calendar/companion?"), url-prefix("https://calendar.google.com/u/0/calendar/companion?"), url-prefix("https://calendar.google.com/u/1/calendar/companion?"), url-prefix("https://calendar.google.com/u/2/calendar/companion?"), url-prefix("https://calendar.google.com/u/3/calendar/companion?"), url-prefix("https://calendar.google.com/u/4/calendar/companion?"), url-prefix("https://calendar.google.com/calendar/b/0/companion?"), url-prefix("https://calendar.google.com/calendar/b/1/companion?"), url-prefix("https://calendar.google.com/calendar/b/2/companion?"), url-prefix("https://calendar.google.com/calendar/b/3/companion?"), url-prefix("https://calendar.google.com/calendar/b/4/companion?") {

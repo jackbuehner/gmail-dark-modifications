@@ -45,6 +45,12 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.2.1
+- newsletters and other email types that were previously not styles are now dark
+- primary tab, inbox icon, and label context menu now follow the accent color
+- quick fix for search/filter creation
+- style new Google Keep search bar
+
 v2.1.0
 - NEW: choose between light blue, your accent color, or white (default) for unread message text [UserCSS only]
 
