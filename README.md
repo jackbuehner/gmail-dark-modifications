@@ -45,6 +45,9 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.2.2
+- fix inverted Gmail logo
+- fix invisible search box
 v2.2.1
 - newsletters and other email types that were previously not styled are now dark
 - primary tab, inbox icon, and label context menu now follow the accent color
