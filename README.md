@@ -45,6 +45,8 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.2.3
+- fix search box text color (#5)
 v2.2.2
 - fix inverted Gmail logo
 - fix invisible search box

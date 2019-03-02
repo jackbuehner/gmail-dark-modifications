@@ -240,7 +240,7 @@
         border-radius: @button-border-rad;
     }
     .SK.ZF-zT,
-    .gb_df {
+    #aso_search_form_anchor.gb_Ee {
         filter: invert(90%) hue-rotate(180deg);
     }
     .gb_fe .gb_Te,
