@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.2.2
+@version        2.2.4
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -1519,78 +1519,87 @@
 }
 @-moz-document url-prefix("https://mail.google.com/mail") {
 /*//GOOGLE DRAWER//*/
+    /*borders*/
+    .gb_z, .gb_h:hover a {
+        border: 1px solid #333
+    }
     /*background*/
-    .gb_ia, .gb_fa, .gb_aa, .gb_da {
+    .gb_C, .gb_z {
         background: #111 !important;
     }
     /*google app hover*/
-    .gb_Z:hover .gb_3, .gb_T:hover .gb_X, .gb_T:hover .gb_O {
+    .gb_h:hover .gb_m, .gb_T:hover .gb_X, .gb_T:hover .gb_O {
         background: #212121;
     }
     .gb_Z:hover a, .gb_T:hover a {
         border: 1px solid #212121;
     }
     /*text color*/
-    .gb_3, .gb_fa, .gb_X {
-        color: #ffffff;
-    }
-    #gb a.gb_ja, #gb a.gb_ja:visited, #gb a.gb_ja:active, #gb a.gb_ka, #gb a.gb_ka:visited, #gb a.gb_ea, #gb a.gb_fa {
+    .gb_m, #gb a.gb_D, .gb_z, #gb a.gb_E {
         color: #ffffff;
     }
     /*more*/
-    .gb_ea {
+    .gb_D, .gb_E {
         background: #212121;
     }
     /*separator*/
-    .gb_ka, .gb_fa {
+    .gb_E {
         border-bottom: 1px solid #212121;
+        left: 0;
+        width: auto;
     }
     /*marketplace apps notice*/
-    .gb_na div.gb_pa, .gb_ja, .gb_ia div.gb_ka {
+    .gb_I div.gb_K {
         background: #212121;
     }
+    /*account name*/
+    .gb_Eb, .gb_9a.gb_ab {
+        color: #e0e0e0;
+    }
+    /*account email*/
+    .gb_bb, .gb_Fb {
+        color: @text-color-b;
+    }
+    /*hyperlinks*/
+    #gb .gb_Za.gb_Za a {
+        color: @text-color-blue;
+    }
     /*account select subaccounts*/
-    .gb_Qb, .gb_Kb, .gb_Sb, .gb_Nb {
-        background: #111;
-        border-top-color: #212121;
+    .gb_qb {
+        background: #161616;
+        border-top-color: #333;
     }
-    .gb_Sb:hover, .gb_Pb:hover {
-        background: #333;
+    .gb_ub:hover {
+        background: unset;
+        box-shadow: inset 200px 200px rgba(255, 255, 255, .06);
     }
-    .gb_3b, .gb_0b, .gb_aa {
-        color: #fff;
+    .gb_ub:active {
+        background: unset;
+        box-shadow: inset 200px 200px rgba(255, 255, 255, .12);
     }
-    /*account select button*/
-    .gb_Ea, .gb_za, .gb_Hb .gb_Fb {
+    /*account menu buttons*/
+    #gb a.gb_0.gb_0 {
         border: 0;
         font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
         font-weight: 500;
         text-transform: uppercase;
         background: transparent;
         border: 1px solid #666666;
-    }
-    .gb_za, #gb a.gb_za.gb_za, .gb_Aa {
-        color: #999999;
-    }
-    .gb_Ea, #gb a.gb_Ea.gb_Ea, .gb_Fa  {
-        color: #fff;
+        color: #e0e0e0 !important;
         cursor: pointer;
-        background-color: #4d90fe;
+        border-radius: @button-border-rad;
     }
-    .gb_Kb .gb_Jb:hover {
-        box-shadow: 0 1px 2px 0 rgba(255,255,255,0.14),0 1px 3px 1px rgba(255,255,255,0.12);
+    #gb a.gb_0.gb_0:hover {
+        box-shadow: inset 200px 200px rgba(255, 255, 255, .08);
         background-image: none;
     }
-    .gb_Hb .gb_Fb:hover {
-        background: none;
-        color: #aaaaaa !important;
+    #gb a.gb_0.gb_0:active {
+        box-shadow: inset 200px 200px rgba(255, 255, 255, .16);
+        background-image: none;
     }
     /*bottom bar*/
-    .gb_Hb {
-        background-color: #212121;
-    }
-    /*notifications border*/
-    #gbsfw.gb_Tc {
-        border-color: #212121;
+    .gb_fb {
+        background-color: #161616;
+        border-top-color: #333;
     }
 }

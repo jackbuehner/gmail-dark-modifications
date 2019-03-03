@@ -35,7 +35,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 📦 [Install the usercss](https://github.com/jackbuehner/gmail-dark-modifications/raw/master/gmail-dark.less.user.css), which supports full customization and automatic updates.<br>
 📦 [Install from userstyles.org](https://userstyles.org/styles/159026) with no customization or automatic updates.<br>
-📦 [Install manually from GitHub](https://github.com/jackbuehner/gmail-dark-modifications/raw/master/gmail-dark.css) with no customization o automatic updates, but useful for development. The style is in Mozilla format.<br>
+📦 [Install manually from GitHub](https://github.com/jackbuehner/gmail-dark-modifications/raw/master/gmail-dark.css) with no customization or automatic updates, but useful for development. The style is in Mozilla format.<br>
 
 
 If you would like to contribute to this repository, please...
@@ -45,8 +45,11 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.2.4
+- fix app drawer and account switcher ([#6](https://github.com/jackbuehner/gmail-dark-modifications/issues/6))
+
 v2.2.3
-- fix search box text color (#5)
+- fix search box text color ([#5](https://github.com/jackbuehner/gmail-dark-modifications/issues/5))
 
 v2.2.2
 - fix inverted Gmail logo
