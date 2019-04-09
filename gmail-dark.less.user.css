@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.2.4
+@version        2.3.0
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -233,6 +233,10 @@
     .aj5.J-KU-Jg {
         border-top-color: @bg-color-2;
     }
+    //stop white flash behind fab
+    .aic {
+        background: none;
+    }
 //SEARCH BAR
     .gb_Te,
     #aso_search_form_anchor,
@@ -240,7 +244,7 @@
         border-radius: @button-border-rad;
     }
     .SK.ZF-zT,
-    #aso_search_form_anchor.gb_Ee {
+    #aso_search_form_anchor.gb_oe {
         filter: invert(90%) hue-rotate(180deg);
     }
     .gb_fe .gb_Te,
@@ -572,18 +576,20 @@
 //CONTEXT MENUS
     /*//CONTEXT MENU//*/
     /*background*/
-    .J-M {
+    .J-M, .t9, .d-Na-JG-M {
         background-color: @bg-color-context;
+        border-radius: @button-border-rad;
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
     }
     /*item*/
-    .J-N, .J-N, .J-LC, .J-JK {
+    .J-N, .J-N, .J-LC, .J-JK, .ua, .d-Na-N {
         color: @text-color-de;
     }
     .J-N:hover,
     .J-N-JT,
     .J-N .J-N-JT,
     .J-LC-JT,
-    .J-JK-JT {
+    .J-JK-JT, .bk5, .d-Na-N-JW {
         color: screen(@text-color-de, #555555) !important;
         background-color: screen(@bg-color-context, #111111) !important;
         border-color: transparent;
@@ -592,12 +598,7 @@
         color: screen(@text-color-de, #555555) !important;
     }
     /*item icon*/
-    .aDD,
-    .aDF,
-    .J-Ph-hFsbo,
-    .J-Ks-KO .J-N-Jo,
-    .asi .J-Ks-KO::before,
-    .J-LC-Jo {
+    .J-Ph-hFsbo, .J-Ks-KO .J-N-Jo, .asi .J-Ks-KO::before, .J-LC-Jo, .J-N-JX.aDE, .d-Na-N .d-Na-J3 {
         filter: invert(1);
     }
     /*hover text*/
@@ -610,7 +611,7 @@
         color: @text-color-9;
     }
     /*section divider*/
-    .J-Kh {
+    .J-Kh, .d-Na-axR {
         border-top: 1px solid screen(@bg-color-context, #111111);
     }
     //side popup text
@@ -1059,11 +1060,21 @@
     .KGNaf.MXZCbf.rhGwLe a {
         color: @text-color-blue;
     }
+    /*sort by date headers*/
+    .nnsg6 {
+        background: none;
+        .V9NiMc {
+            color: #ccc;
+        }
+        .u2tuDe {
+            color: #ff786f;
+        }
+    }
     /*white icons*/
 
-    .EfSjgb,
-    .UXfMHb {
+    .EfSjgb, .UXfMHb, .EeFUTc {
         color: white;
+        fill: #ffffffc2;
     }
     /*add task button*/
 
@@ -1071,7 +1082,7 @@
         background-color: #212121;
         border-radius: 2px;
     }
-    .UhNUGe:hover {
+    .UhNUGe:hover, .UhNUGe:focus {
         background-color: #333;
     }
     /*//context menu//*/
@@ -1189,6 +1200,10 @@
         letter-spacing: 0.25px;
         font-size: 0.875rem;
         height: 35px;
+    }
+    /*what's new*/
+    .ICClvb {
+        background-color: #212121;
     }
 }
 @-moz-document url-prefix("https://keep.google.com/companion?"), url-prefix("https://keep.google.com/u/0/companion?"), url-prefix("https://keep.google.com/u/1/companion?"), url-prefix("https://keep.google.com/u/2/companion?"), url-prefix("https://keep.google.com/u/3/companion?"), url-prefix("https://keep.google.com/u/4/companion?") {
@@ -1380,7 +1395,7 @@
     /*//----------//*/
     /*//main view//*/
     /*background color*/
-    .v83gc, .GENA3c, .w61Ns, .Gk2izd, .cBs4Te, .IKYMIb {
+    .v83gc, .GENA3c, .w61Ns, .Gk2izd, .cBs4Te, .IKYMIb, .erzbAb {
         background-color: #111;
     }
     /*white text*/
@@ -1598,7 +1613,7 @@
         background-image: none;
     }
     /*bottom bar*/
-    .gb_fb {
+    .gb_jb {
         background-color: #161616;
         border-top-color: #333;
     }
