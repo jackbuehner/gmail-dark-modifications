@@ -572,18 +572,20 @@
 //CONTEXT MENUS
     /*//CONTEXT MENU//*/
     /*background*/
-    .J-M {
+    .J-M, .t9, .d-Na-JG-M {
         background-color: @bg-color-context;
+        border-radius: @button-border-rad;
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
     }
     /*item*/
-    .J-N, .J-N, .J-LC, .J-JK {
+    .J-N, .J-N, .J-LC, .J-JK, .ua, .d-Na-N {
         color: @text-color-de;
     }
     .J-N:hover,
     .J-N-JT,
     .J-N .J-N-JT,
     .J-LC-JT,
-    .J-JK-JT {
+    .J-JK-JT, .bk5, .d-Na-N-JW {
         color: screen(@text-color-de, #555555) !important;
         background-color: screen(@bg-color-context, #111111) !important;
         border-color: transparent;
@@ -592,12 +594,7 @@
         color: screen(@text-color-de, #555555) !important;
     }
     /*item icon*/
-    .aDD,
-    .aDF,
-    .J-Ph-hFsbo,
-    .J-Ks-KO .J-N-Jo,
-    .asi .J-Ks-KO::before,
-    .J-LC-Jo {
+    .J-Ph-hFsbo, .J-Ks-KO .J-N-Jo, .asi .J-Ks-KO::before, .J-LC-Jo, .J-N-JX.aDE, .d-Na-N .d-Na-J3 {
         filter: invert(1);
     }
     /*hover text*/
@@ -610,7 +607,7 @@
         color: @text-color-9;
     }
     /*section divider*/
-    .J-Kh {
+    .J-Kh, .d-Na-axR {
         border-top: 1px solid screen(@bg-color-context, #111111);
     }
     //side popup text
