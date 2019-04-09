@@ -1190,6 +1190,10 @@
         font-size: 0.875rem;
         height: 35px;
     }
+    /*what's new*/
+    .ICClvb {
+        background-color: #212121;
+    }
 }
 @-moz-document url-prefix("https://keep.google.com/companion?"), url-prefix("https://keep.google.com/u/0/companion?"), url-prefix("https://keep.google.com/u/1/companion?"), url-prefix("https://keep.google.com/u/2/companion?"), url-prefix("https://keep.google.com/u/3/companion?"), url-prefix("https://keep.google.com/u/4/companion?") {
 /*//GOOGLE KEEP//*/
