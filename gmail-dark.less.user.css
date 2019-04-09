@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.2.4
+@version        2.3.0
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -232,6 +232,10 @@
     }
     .aj5.J-KU-Jg {
         border-top-color: @bg-color-2;
+    }
+    //stop white flash behind fab
+    .aic {
+        background: none;
     }
 //SEARCH BAR
     .gb_Te,
@@ -1078,7 +1082,7 @@
         background-color: #212121;
         border-radius: 2px;
     }
-    .UhNUGe:hover {
+    .UhNUGe:hover, .UhNUGe:focus {
         background-color: #333;
     }
     /*//context menu//*/

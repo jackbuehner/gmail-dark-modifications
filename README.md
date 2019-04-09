@@ -45,6 +45,18 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.3.0
+- theme un-styled context menus
+- context menus now match the border radius of buttons
+- make new context menu icons light
+- add dark background for Google Tasks date separators
+- fix search box (again)
+- make Google Tasks new task box dark when focused
+- fix account switcher background and border colors
+- fix missing background on Google Calendar calendar selection screen
+- fix invisible edit button for tasks in Google Tasks
+- block white flash behind compose button
+
 v2.2.4
 - fix app drawer and account switcher ([#6](https://github.com/jackbuehner/gmail-dark-modifications/issues/6))
 
