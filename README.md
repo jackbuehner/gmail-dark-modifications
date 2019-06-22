@@ -1,4 +1,4 @@
-# Gmail Dark Theme Tweaks
+﻿# Gmail Dark Theme Tweaks
 This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 
 There is also support for add-ons that add additional modifications (see bottom of description)
@@ -45,6 +45,10 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.3.1
+- fix search box (again x3)
+- make email message details dropdown arrow visible
+
 v2.3.0
 - theme un-styled context menus
 - context menus now match the border radius of buttons
