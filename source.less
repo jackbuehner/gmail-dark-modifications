@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.3.1
+@version        2.4.0
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -15,13 +15,14 @@
 
 @var    checkbox    email-body              'Dark theme in email body'          1
 
-@var    color       button-bg               'Accent color'                      #d44b3d
-@var    color       fab-bg                  'FAB background color'              #d44b3d
+@var    color       button-bg               'Accent color'                      #ff7c68
+@var    color       fab-bg                  'FAB background color'              #ff7c68
 @var    color       bg-color-1              'Main background color'             #111111
 @var    color       bg-color-context        'Context menu background color'     #242424
 @var    color       bg-color-2              'Secondary background color'        #212121
 @var    color       bg-color-3              'Tertiary background color'         #363636
 @var    color       bg-color-4              'Quaternary background color'       #424242
+@var    color       message-select          'Selected message color'            #ff7c68
 
 @var    select      appbar-color            'App bar background color' {
     "Transparent": "transparent",
@@ -40,7 +41,7 @@
 @var    color       text-color-b            'Text color B'                      #bbbbbb
 @var    color       text-color-9            'Text color 9'                      #999999
 @var    color       text-color-6            'Text color 6'                      #666666
-@var    color       fab-text                'FAB text color'                    #e0e0e0
+@var    color       fab-text                'FAB text color'                    #000000
 
 @var    text        fab-border-rad          'FAB border radius'                 24px
 @var    text        side-tab-border-rad     'Side navigation border radius'     16px
@@ -73,19 +74,20 @@
 @doc-preview-border-rad: 16px;
 @button-border-rad: 4px;
 @label-border-rad: 0px;
-@button-bg: #d44b3d;
+@button-bg: #ff7c68;
 @bg-color-1: #111;
 @bg-color-context: #242424;
 @bg-color-2: #212121;
 @bg-color-3: #363636;
 @bg-color-4: #424242;
-@fab-bg: #d44b3d;
+@message-select: #ff7c68;
+@fab-bg: #ff7c68;
 @text-color-de: #dedede;
 @text-color-b: #bbbbbb;
 @text-color-c: #cccccc;
 @text-color-9: #999999;
 @text-color-6: #666666;
-@fab-text: #e0e0e0;
+@fab-text: #000;
 @hover-color-dark: rgba(0, 0, 0, .05);
 @hover-effect-dark: inset 10000px 0px 0px @hover-color-dark;
 @active-color-dark: rgba(0, 0, 0, .1);
@@ -108,18 +110,18 @@
         font-size: 0.875rem;
         border-radius: @button-border-rad;
         background-color: @button-bg;
-        color: #ffffff;
+        color: #000;
         height: 35px;
         border: none;
         &:hover {
             background-color: screen(@button-bg, #111);
             box-shadow: 0 1px 2px 0 rgba(0,0,0,0.14),0 1px 3px 1px rgba(0,0,0,0.12);
-            color: #ffffff;
+            color: #000;
         }
         &:active, &:focus:hover {
             background-color: screen(@button-bg, #222);
             box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.2);
-            color: #ffffff;
+            color: #000;
             border: none;
         }
         &:focus {
@@ -170,7 +172,7 @@
         //compose icon
         .L3::before {
             background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMTNoLTZ2NmgtMnYtNkg1di0yaDZWNWgydjZoNnYyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);
-            filter: invert(90%);
+            filter: invert(0%);
         }
     }
     //tabs
@@ -281,6 +283,7 @@
     div.b8 .a8k, .bAo > .ad {
         font-family: Roboto;
         text-transform: uppercase;
+        color: @button-bg;
     }
 
 //MESSAGE LIST
@@ -395,6 +398,14 @@
         .J-KU-KO > .aHE-aLf {
             background-image: url('https://www.gstatic.com/images/icons/material/system/1x/forum_gm_purple500_20dp.png');
         }
+    //selected message background
+    .x7 {
+        background: fade(@message-select, 20%);
+    }
+    //focused message accent
+    td.PF.xY.PE {
+        visibility: hidden;
+    }
 //EMAIL VIEWER
     //background
     .bAn, .bAt, .bAt > tbody, .bAt > tbody > tr, .Bu, .Su .nH.aBz, .iC {
@@ -849,6 +860,24 @@
     /*close*/
     .vN > .vM {
         background-image: url('https://www.gstatic.com/images/icons/material/system/1x/close_white_16dp.png');
+    }
+    //send button
+    .dC {
+        border-radius: @button-border-rad;
+        &:hover {
+            box-shadow: none;
+        }
+        .v7.T-I-atl {
+            border-radius: @button-border-rad 0 0 @button-border-rad;
+        }
+        .hG.T-I {
+            border-radius: 0 @button-border-rad @button-border-rad 0;
+            border-left: none;
+            background: @button-bg;
+            .G-asx {
+                filter: invert(100%);
+            }
+        }
     }
 //QUICK COMPOSE (IN EMAIL)
     .HM .et, .HM .btC, .IG, .aC3 {
@@ -1580,7 +1609,7 @@
     }
     /*hyperlinks*/
     #gb .gb_Za.gb_Za a {
-        color: @text-color-blue;
+        color: @button-bg;
     }
     /*account select subaccounts*/
     .gb_qb {
@@ -1616,7 +1645,7 @@
         background-image: none;
     }
     /*bottom bar*/
-    .gb_jb {
+    .gb_ib {
         background-color: #161616;
         border-top-color: #333;
     }

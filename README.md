@@ -45,21 +45,29 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.4.0
+- switched to lighter default accent color for increased contrast (applies to accent text and button colors)
+- switched button text to be dark colored for increased contrast
+- applied accent color to more elements (snackbar buttons, selected message, other links)
+- hid blue focused message bar
+- added color picker for selected message background color
+- fixed white background in account picker
+
 v2.3.1
-- fix search box (again x3)
-- make email message details dropdown arrow visible
+- fixed search box (again x3)
+- made email message details dropdown arrow visible
 
 v2.3.0
-- theme un-styled context menus
+- themed un-styled context menus
 - context menus now match the border radius of buttons
-- make new context menu icons light
-- add dark background for Google Tasks date separators
-- fix search box (again)
-- make Google Tasks new task box dark when focused
-- fix account switcher background and border colors
-- fix missing background on Google Calendar calendar selection screen
-- fix invisible edit button for tasks in Google Tasks
-- block white flash behind compose button
+- made new context menu icons light
+- added dark background for Google Tasks date separators
+- fixed search box (again)
+- made Google Tasks new task box dark when focused
+- fixed account switcher background and border colors
+- fixed missing background on Google Calendar calendar selection screen
+- fixed invisible edit button for tasks in Google Tasks
+- blocked white flash behind compose button
 
 v2.2.4
 - fix app drawer and account switcher ([#6](https://github.com/jackbuehner/gmail-dark-modifications/issues/6))
