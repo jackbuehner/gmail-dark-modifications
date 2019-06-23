@@ -45,6 +45,10 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.5.0
+- added control for card and window border radius
+- switched quick compose to use same method for making text dark as email viewer
+
 v2.4.0
 - switched to lighter default accent color for increased contrast (applies to accent text and button colors)
 - switched button text to be dark colored for increased contrast

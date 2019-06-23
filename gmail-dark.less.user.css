@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/jackbuehner/gmail-dark-modifications
 @supportURL     https://github.com/jackbuehner/gmail-dark-modifications/issues/
 @updateURL      https://raw.githubusercontent.com/jackbuehner/gmail-dark-modifications/master/gmail-dark.less.user.css
-@version        2.4.0
+@version        2.5.0
 @description    This style adds a dark theme to additional UI elements on the Gmail webpage. It also makes slight modifications to the appearance of certain elements, including restoring the red compose button.
 @author         Jack Buehner
 @license        CC BY-NC-SA 4.0
@@ -46,7 +46,7 @@
 @var    text        fab-border-rad          'FAB border radius'                 24px
 @var    text        side-tab-border-rad     'Side navigation border radius'     16px
 @var    text        doc-preview-border-rad  'Email list buttons border radius'  16px
-@var    text        button-border-rad       'Button border radius'              4px
+@var    text        button-border-rad       'Button, window, and card border radius'    4px
 @var    text        label-border-rad        'Label border radius'               0px
 
 @var    color       hover-color-dark        Dark_Items_Hover_color              rgba(0, 0, 0, .05)
@@ -271,13 +271,13 @@
     }
 //SNACKBAR
     .bAp.b8.UC .vh {
-        border-radius: 2px;
+        border-radius: @button-border-rad;
         box-shadow: none;
         background-color: @bg-color-context;
     }
     /*snackbar buttons*/
     div.b8 .a8k::before, .bAo > .ad::before {
-        border-radius: 2px;
+        border-radius: @button-border-rad;
         background: screen(@bg-color-context, #444444);
     }
     div.b8 .a8k, .bAo > .ad {
@@ -653,7 +653,7 @@
     div.Kj-JD,
     .bug {
         background-color: @bg-color-2;
-        border-radius: 2px;
+        border-radius: @button-border-rad;
     }
     //window title
     span.Kj-JD-K7-K0,
@@ -815,7 +815,7 @@
         }
     }
     /*body*/
-    .Am {
+    .Am:not(.aO9) {
         background: @bg-color-1;
         color: @text-color-de;
     }
@@ -880,10 +880,15 @@
         }
     }
 //QUICK COMPOSE (IN EMAIL)
+    .Am.aO9 {
+        filter: invert(93.2%) hue-rotate(180deg);
+        background-color: #fff;
+    }
     .HM .et, .HM .btC, .IG, .aC3 {
         background: @bg-color-1;
     }
     .HM .I5 {
+        border-radius: @button-border-rad;
         border-color: @bg-color-3;
         &:hover {
             box-shadow: 0 1px 2px 0 rgba(0,0,0,0.302),0 2px 6px 2px rgba(0,0,0,0.149);
