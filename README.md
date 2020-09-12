@@ -27,7 +27,7 @@ Add-ons:<br>
 [Square Compose Button - Gmail 2018](https://userstyles.org/styles/159108)<br>
 [ADD-ON | Replace archive with done-Gmail Dark 2018](https://userstyles.org/styles/160365)
 ## Preview
-![](159026_after.png)
+![](GmailPreview.png)
 
 ## Installation
 
