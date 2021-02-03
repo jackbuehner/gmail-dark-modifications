@@ -45,6 +45,9 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.5.1
+- removed white flash in compose window
+
 v2.5.0
 - added control for card and window border radius
 - switched quick compose to use same method for making text dark as email viewer
