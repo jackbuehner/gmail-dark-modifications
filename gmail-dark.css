@@ -406,6 +406,9 @@
   td.PF.xY.PE {
     visibility: hidden;
   }
+  .iY {
+    background: transparent !important;
+  }
   .bAn,
   .bAt,
   .bAt > tbody,
