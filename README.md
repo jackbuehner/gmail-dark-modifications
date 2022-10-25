@@ -45,6 +45,9 @@ If you would like to contribute to this repository, please...
 1. Create a pull request
 
 ## Update Notes
+v2.5.2
+- fixed the white border around the message border
+
 v2.5.1
 - removed white flash in compose window
 
