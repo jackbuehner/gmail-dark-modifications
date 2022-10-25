@@ -408,6 +408,9 @@
     }
 //EMAIL VIEWER
     //background
+    .iY {
+        background: transparent !important;
+    }
     .bAn, .bAt, .bAt > tbody, .bAt > tbody > tr, .Bu, .Su .nH.aBz, .iC {
         background: @bg-color-1 !important;
     }
