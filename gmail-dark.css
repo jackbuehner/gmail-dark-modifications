@@ -426,12 +426,12 @@
   .nH.byY .xE .G-atb .T-I-ax7 {
     filter: invert(100%);
   }
-  .nH.hx {
-    color: #bbbbbb;
-  }
   .nH.qY {
     background-color: #212121;
     box-shadow: none !important;
+  }
+  .nH.qY .t1 {
+    color: #bbbbbb !important;
   }
   .nH.qY .t2,
   .nH.qY .vL {
