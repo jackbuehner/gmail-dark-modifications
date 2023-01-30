@@ -426,6 +426,23 @@
   .nH.byY .xE .G-atb .T-I-ax7 {
     filter: invert(100%);
   }
+  .nH.qY {
+    background-color: #212121;
+    box-shadow: none !important;
+  }
+  .nH.qY .t1 {
+    color: #bbbbbb !important;
+  }
+  .nH.qY .t2,
+  .nH.qY .vL {
+    color: #999999;
+  }
+  .nH.qY .vU {
+    color: #bbbbbb;
+  }
+  .nH.qY .tk > div:first-child {
+    filter: invert(100%);
+  }
   .hU.hM {
     border-radius: 0px 0 0 0px;
   }
